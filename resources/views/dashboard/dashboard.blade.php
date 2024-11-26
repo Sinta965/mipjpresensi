@@ -14,7 +14,7 @@
 
         }
     </style>
-    <div class="section" id="user-section">
+    <div class="section" id="user-section" style="background-color: pink;">
         <a href="/proseslogout" class="logout">
             <ion-icon name="exit-outline"></ion-icon>
         </a>
@@ -40,54 +40,58 @@
         </div>
     </div>
 
-    <div class="section" id="menu-section">
-        <div class="card">
-            <div class="card-body text-center">
-                <div class="list-menu">
-                    <div class="item-menu text-center">
-                        <div class="menu-icon">
-                            <a href="/editprofile" class="green" style="font-size: 40px;">
-                                <ion-icon name="person-sharp"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="menu-name">
-                            <span class="text-center">Profil</span>
-                        </div>
+   <div class="section" id="menu-section">
+    <div class="card border-0 shadow-sm rounded-sm">
+        <div class="card-body p-2">
+            <div class="list-menu d-flex flex-wrap justify-content-between">
+                <div class="item-menu text-center mb-2">
+                    <div class="menu-icon mb-1">
+                        <a href="/editprofile" class="d-flex justify-content-center align-items-center" style="font-size: 30px; color: #ffffff; background-color: #e91e63; border-radius: 50%; width: 50px; height: 50px;">
+                            <ion-icon name="person-sharp"></ion-icon>
+                        </a>
                     </div>
-                    <div class="item-menu text-center">
-                        <div class="menu-icon">
-                            <a href="/presensi/izin" class="danger" style="font-size: 40px;">
-                                <ion-icon name="calendar-number"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="menu-name">
-                            <span class="text-center">Cuti</span>
-                        </div>
-                    </div>
-                    <div class="item-menu text-center">
-                        <div class="menu-icon">
-                            <a href="/presensi/histori" class="warning" style="font-size: 40px;">
-                                <ion-icon name="document-text"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="menu-name">
-                            <span class="text-center">Histori</span>
-                        </div>
-                    </div>
-                    <div class="item-menu text-center">
-                        <div class="menu-icon">
-                            <a href="" class="orange" style="font-size: 40px;">
-                                <ion-icon name="location"></ion-icon>
-                            </a>
-                        </div>
-                        <div class="menu-name">
-                            Lokasi
-                        </div>
+                    <div class="menu-name">
+                        <span class="d-block text-uppercase font-weight-bold" style="color: #333; font-size: 12px;">Profil</span>
                     </div>
                 </div>
+                <div class="item-menu text-center mb-2">
+                    <div class="menu-icon mb-1">
+                        <a href="/presensi/izin" class="d-flex justify-content-center align-items-center" style="font-size: 30px; color: #ffffff; background-color: #e91e63; border-radius: 50%; width: 50px; height: 50px;">
+                            <ion-icon name="calendar-number"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="menu-name">
+                        <span class="d-block text-uppercase font-weight-bold" style="color: #333; font-size: 12px;">Cuti</span>
+                    </div>
+                </div>
+                <div class="item-menu text-center mb-2">
+                    <div class="menu-icon mb-1">
+                        <a href="/presensi/histori" class="d-flex justify-content-center align-items-center" style="font-size: 30px; color: #ffffff; background-color: #e91e63; border-radius: 50%; width: 50px; height: 50px;">
+                            <ion-icon name="document-text"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="menu-name">
+                        <span class="d-block text-uppercase font-weight-bold" style="color: #333; font-size: 12px;">Histori</span>
+                    </div>
+                </div>
+                <div class="item-menu text-center mb-2">
+                    <div class="menu-icon mb-1">
+                        <a href="#" class="d-flex justify-content-center align-items-center" style="font-size: 30px; color: #ffffff; background-color: #e91e63; border-radius: 50%; width: 50px; height: 50px;">
+                            <ion-icon name="location"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="menu-name">
+                        <span class="d-block text-uppercase font-weight-bold" style="color: #333; font-size: 12px;">Lokasi</span>
+                    </div>
+                    
+                </div>
+                
             </div>
         </div>
     </div>
+</div>
+
+
     <div class="section mt-2" id="presence-section">
         <div class="todaypresence">
             <div class="row">
@@ -111,7 +115,7 @@
                                     @endif
                                 </div>
                                 <div class="presencedetail">
-                                    <h4 class="presencetitle">Masuk</h4>
+                                    <h4 class="presencetitle">TRAKING</h4>
                                     <span>{{ $presensihariini != null ? $presensihariini->jam_in : 'Belum Absen' }}</span>
                                 </div>
                             </div>
@@ -137,7 +141,7 @@
                                     @endif
                                 </div>
                                 <div class="presencedetail">
-                                    <h4 class="presencetitle">Pulang</h4>
+                                    <h4 class="presencetitle">SELESAI </h4>
                                     <span>{{ $presensihariini != null && $presensihariini->jam_out != null ? $presensihariini->jam_out : 'Belum Absen' }}</span>
                                 </div>
                             </div>
@@ -205,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <div class="presencetab mt-2">
+        <div class="presencetab mt-2" style="background-color: pink;">
             <div class="tab-pane fade show active" id="pilled" role="tabpanel">
                 <ul class="nav nav-tabs style1" role="tablist">
                     <li class="nav-item">
@@ -231,7 +235,7 @@
                                                                                                                                                                                                                         <li>
                                                                                                                                                                                                                             <div class="item">
                                                                                                                                                                                                                                 <div class="icon-box bg-primary">
-                                                                                                                                                                                                                                    <ion-icon name="finger-print-outline"></ion-icon>
+                                                                                                                                                                                                                                    <ion-icon name="person-circle-outline"></ion-icon>
                                                                                                                                                                                                                                 </div>
                                                                                                                                                                                                                                 <div class="in">
                                                                                                                                                                                                                                     <div>{{ date('d-m-Y', strtotime($d->tgl_presensi)) }}</div>
@@ -246,11 +250,11 @@
 
                     @foreach ($historibulanini as $d)
                         @if ($d->status == 'h')
-                            <div class="card mb-1" style="border : 1px solid blue">
+                            <div class="card mb-1" style="border : 1px solid red">
                                 <div class="card-body">
                                     <div class="historicontent">
                                         <div class="iconpresensi">
-                                            <ion-icon name="finger-print-outline" style="font-size: 48px;"
+                                            <ion-icon name="person-circle-outline" style="font-size: 48px;"
                                                 class="text-success"></ion-icon>
                                         </div>
                                         <div class="datapresensi">
@@ -266,7 +270,7 @@
                                             <span>
                                                 {!! $d->jam_out != null
                                                     ? '-' . date('H:i', strtotime($d->jam_out))
-                                                    : '<span class="text-danger">- Belum Scan</span>' !!}
+                                                    : '<span class="text-danger">- Belum SELESAI </span>' !!}
                                             </span>
                                             <br>
                                             @php

@@ -7,7 +7,7 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle">E-Presensi</div>
+        <div class="pageTitle">TRUCKING APP</div>
         <div class="right"></div>
     </div>
     <!-- * App Header -->
@@ -65,19 +65,19 @@
         <p>Mulai : {{ date('H:i', strtotime($jamkerja->awal_jam_masuk)) }}</p>
         <p>Masuk : {{ date('H:i', strtotime($jamkerja->jam_masuk)) }}</p>
         <p>Akhir : {{ date('H:i', strtotime($jamkerja->akhir_jam_masuk)) }}</p>
-        <p>Pulang : {{ date('H:i', strtotime($jamkerja->jam_pulang)) }}</p>
+        <p>Lanjutan : {{ date('H:i', strtotime($jamkerja->jam_pulang)) }}</p>
     </div>
     <div class="row">
         <div class="col">
             @if ($cek > 0)
                 <button id="takeabsen" class="btn btn-danger btn-block">
                     <ion-icon name="camera-outline"></ion-icon>
-                    Absen Pulang
+                    TRAKING JALUR KEDUA
                 </button>
             @else
                 <button id="takeabsen" class="btn btn-primary btn-block">
                     <ion-icon name="camera-outline"></ion-icon>
-                    Absen Masuk
+                    TRAKING JALUR
                 </button>
             @endif
         </div>
